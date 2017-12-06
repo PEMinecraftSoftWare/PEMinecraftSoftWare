@@ -79,7 +79,7 @@ class LoginPacket extends DataPacket{
 	protected function decodePayload(){
 		$this->protocol = ((\unpack("N", $this->get(4))[1] << 32 >> 32));
 
-		if($this->protocol !== ProtocolInfo::CURRENT_PROTOCOL){
+		if($this->protocol > ProtocolInfo::NEWEST_PROTOCOL or ProtocolInfo::OLDEST_PROTOCOL > $this->protocol){
 			if($this->protocol > 0xffff){ //guess MCPE <= 1.1
 				$this->offset -= 6;
 				$this->protocol = ((\unpack("N", $this->get(4))[1] << 32 >> 32));
