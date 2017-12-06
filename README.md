@@ -8,16 +8,16 @@
 *이 소프트웨어는 Pmmp 3.0.0-ALPHA9버전에서 포크가 시작된 버전으로 API무시 기능을 탑재할 예정입니다.
 
 # 기능
-[] 멀티 버전(멀티 프로토콜)
-[] API 무시
-[] DevTools 내장
-[] 자동 업데이트
-[] 레드스폰
-[] 몹 AI
-[] 엔더 & 네더 월드
-[] 기후 기능
-[] UI구현 툴 내장
-[] 텔레그램 봇
+[ ] 멀티 버전(멀티 프로토콜)
+[ ] API 무시
+[ ] DevTools 내장
+[ ] 자동 업데이트
+[ ] 레드스폰
+[ ] 몹 AI
+[ ] 엔더 & 네더 월드
+[ ] 기후 기능
+[ ] UI구현 툴 내장
+[ ] 텔레그램 봇
 
 
 # PEMinecraftSoftWare(영어, EnglishVersion)(Sorry for my bad english.)
@@ -30,13 +30,13 @@
 *Features will be added or deleted!
 
 # Features
-[] Multi Version(Multi Protocol)
-[] Load every APIs
-[] put DevTools
-[] AutoMatic Update
-[] RedStone
-[] Mob AI(Entity AI)
-[] Load Ender & Nether Level
-[] Weather
-[] UIAPI
-[] TelegramBot
+[ ] Multi Version(Multi Protocol)
+[ ] Load every APIs
+[ ] put DevTools
+[ ] AutoMatic Update
+[ ] RedStone
+[ ] Mob AI(Entity AI)
+[ ] Load Ender & Nether Level
+[ ] Weather
+[ ] UIAPI
+[ ] TelegramBot
