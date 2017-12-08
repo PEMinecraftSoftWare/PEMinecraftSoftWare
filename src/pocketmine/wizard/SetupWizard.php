@@ -37,6 +37,7 @@ class SetupWizard{
 	public const DEFAULT_MEMORY = 256;
 	public const DEFAULT_PLAYERS = 20;
 	public const DEFAULT_GAMEMODE = 0;
+	public const DEFAULT_LOGPRINT = 1;
 
 	/** @var BaseLang */
 	private $lang;
@@ -153,6 +154,15 @@ LICENSE;
 		}else{
 			$config->set("spawn-protection", 16);
 		}
+
+		$this->message($this->lang->get("log_print"));
+		do{
+			$log = (int) $this->getInput($this->lang->get("log_print"), (string) self::DEFAULT_LOGPRINT);
+		}while(0 > $log or 1 < $log);
+
+		$log = ($log == 1)? true:false;
+
+		$config->set("log", $log);
 
 		$config->save();
 	}
