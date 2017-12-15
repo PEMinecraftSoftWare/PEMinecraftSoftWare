@@ -79,25 +79,23 @@ class LoginPacket extends DataPacket{
 	protected function decodePayload(){
 		$this->protocol = ((\unpack("N", $this->get(4))[1] << 32 >> 32));
 
-		if($this->protocol > ProtocolInfo::NEWEST_PROTOCOL or ProtocolInfo::OLDEST_PROTOCOL > $this->protocol){
 			if($this->protocol > 0xffff){ //guess MCPE <= 1.1
 				$this->offset -= 6;
 				$this->protocol = ((\unpack("N", $this->get(4))[1] << 32 >> 32));
 			}
-		}
 
 		try{
 			$this->decodeConnectionRequest();
 		}catch(\Throwable $e){
-			if($this->protocol === ProtocolInfo::CURRENT_PROTOCOL){
+	//		if($this->protocol === ProtocolInfo::CURRENT_PROTOCOL){
 				throw $e;
-			}
+	/*		}
 
 			$logger = MainLogger::getLogger();
 			$logger->debug(\get_class($e)  . " was thrown while decoding connection request in login (protocol version " . ($this->protocol ?? "unknown") . "): " . $e->getMessage());
 			foreach(\pocketmine\getTrace(0, $e->getTrace()) as $line){
 				$logger->debug($line);
-			}
+			}*/
 		}
 	}
 

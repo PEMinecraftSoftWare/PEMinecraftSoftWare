@@ -80,7 +80,7 @@ namespace pocketmine {
 	use raklib\RakLib;
 
 	const NAME = "PEMinecraftSoftWare - PMSW";
-		const VERSION = 'Test 1v';
+  const VERSION = '1.0.0';
 	const API_VERSION = "3.0.0-ALPHA9";
 	const CODENAME = "[RagNarok]";
 
